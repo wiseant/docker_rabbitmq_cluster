@@ -15,7 +15,6 @@ function launch_node {
 	NODE=$1
 	AMQP_PORT=$2
 	MGMT_PORT=$3
-	HOST=${NODE}-host
 	docker run -d \
         	--name=$NODE \
         	-p $AMQP_PORT:5672 \
