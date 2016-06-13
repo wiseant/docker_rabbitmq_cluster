@@ -3,7 +3,7 @@
 NODE1=rabbitmqa
 NODE2=rabbitmqb
 NODE3=rabbitmqc
-ERLANG_COOKIE='YZSDHWMFSMKEMBDHSGGZ'
+ERLANG_COOKIE='CPTBTPTPBCPTDTPTP'
 NET_NAME=rabbitmqnet
 
 echo "Launching Networking"
@@ -22,7 +22,7 @@ function launch_node {
 			-e RABBITMQ_ERLANG_COOKIE=$ERLANG_COOKIE \
         	-h $NODE \
         	--net=$NET_NAME \
-		rabbitmq:3.5-management
+		rabbitmq:3.6.2-management
 }
 
 #调用函数创建节点, 参数分别为：节点名称(也是Docker容器名称),AMQP端口,Management端口

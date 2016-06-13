@@ -24,7 +24,7 @@ function launch_node {
         	-h ${NODE}.$DNS_NAME \
         	--dns $(docker inspect -f '{{.NetworkSettings.IPAddress}}' dns) \
         	--dns-search $DNS_NAME \
-		rabbitmq:3.5-management
+		rabbitmq:3.6.2-management
 }
 
 #调用函数创建节点, 参数分别为：节点名称(也是Docker容器名称),AMQP端口,Management端口
